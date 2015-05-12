@@ -62,3 +62,7 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+
+# Unity Visual Studio Plugin
+Assets/UnityVS.meta
+Assets/UnityVS
