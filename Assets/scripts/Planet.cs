@@ -1,29 +1,29 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Planet : MonoBehaviour
+public class planet : MonoBehaviour
 {
-    public Transform orbit_target; 
+    public Transform orbit_target;
     public float orbit_kick;
 
     private Rigidbody planet_physics;
 
-    void Start()
+    private void Start()
     {
         planet_physics = GetComponent<Rigidbody>();
     }
 
-    void FixedUpdate()
+    private void FixedUpdate()
     {
         transform.LookAt(orbit_target);
         while (orbit_kick > 0)
         {
-            planet_physics.AddForce(transform.right * orbit_kick);
+            planet_physics.AddForce(transform.right*orbit_kick);
             orbit_kick = 0;
         }
     }
 
-    void OnDrawGizmosSelected()
+    private void OnDrawGizmosSelected()
     {
         if (planet_physics != null)
         {
