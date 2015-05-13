@@ -29,5 +29,25 @@ public class UserInput : MonoBehaviour
 	        _cameraScript.IsFreeLook = false;
         }
         #endregion
+
+        PlayerShipControls();
+    }
+
+    void PlayerShipControls()
+    {
+        if (Input.GetKey(KeyCode.A))
+        {
+            _playerShip.AddForceLeft(1.0f);
+        }
+
+        if (Input.GetKey(KeyCode.D))
+        {
+            _playerShip.AddForceRight(1.0f);
+        }
+
+        if (Input.GetKey(KeyCode.W))
+        {
+            _playerShip.AddForceForward(1.0f);
+        }
     }
 }
