@@ -2,10 +2,12 @@
 using UnityEngine;
 
 [UsedImplicitly]
+// ReSharper disable once CheckNamespace
 public class Planet : MonoBehaviour
 {
+    // ReSharper disable once MemberCanBePrivate.Global
     public float OrbitKick;
-    public Transform OrbitTarget;
+    [UsedImplicitly] public Transform OrbitTarget;
     private Rigidbody _planetPhysics;
 
     private void Start()
@@ -25,11 +27,12 @@ public class Planet : MonoBehaviour
 
     private void OnDrawGizmosSelected()
     {
-        if (_planetPhysics != null)
+        if (_planetPhysics == null)
         {
-            Gizmos.color = Color.red;
-            var direction = _planetPhysics.velocity;
-            Gizmos.DrawRay(transform.position, direction);
+            return;
         }
+        Gizmos.color = Color.red;
+        var direction = _planetPhysics.velocity;
+        Gizmos.DrawRay(transform.position, direction);
     }
 }
