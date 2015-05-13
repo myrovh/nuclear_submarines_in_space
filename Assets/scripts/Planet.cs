@@ -1,34 +1,34 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿using JetBrains.Annotations;
+using UnityEngine;
 
-public class planet : MonoBehaviour
+[UsedImplicitly]
+public class Planet : MonoBehaviour
 {
-    public Transform orbit_target;
-    public float orbit_kick;
-
-    private Rigidbody planet_physics;
+    public float OrbitKick;
+    public Transform OrbitTarget;
+    private Rigidbody _planetPhysics;
 
     private void Start()
     {
-        planet_physics = GetComponent<Rigidbody>();
+        _planetPhysics = GetComponent<Rigidbody>();
     }
 
     private void FixedUpdate()
     {
-        transform.LookAt(orbit_target);
-        while (orbit_kick > 0)
+        transform.LookAt(OrbitTarget);
+        while (OrbitKick > 0)
         {
-            planet_physics.AddForce(transform.right*orbit_kick);
-            orbit_kick = 0;
+            _planetPhysics.AddForce(transform.right*OrbitKick);
+            OrbitKick = 0;
         }
     }
 
     private void OnDrawGizmosSelected()
     {
-        if (planet_physics != null)
+        if (_planetPhysics != null)
         {
             Gizmos.color = Color.red;
-            Vector3 direction = planet_physics.velocity;
+            var direction = _planetPhysics.velocity;
             Gizmos.DrawRay(transform.position, direction);
         }
     }

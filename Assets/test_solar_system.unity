@@ -234,13 +234,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1360400994}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28b8a24bc4e2fa14a9b62e4a5cdfc8ce, type: 3}
+  m_Script: {fileID: 11500000, guid: cd7d6d4da0b6b4b48aaa6f0386b1b105, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gravity_strength: 100
-  gravity_strength_exponent: 1
-  gravity_range: 50
-  target_tag: gravity
+  GravityRange: 100
+  GravityStrength: 50
+  GravityStrengthExponent: 1
+  TargetTag: gravity
 --- !u!23 &1360400996
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -355,13 +355,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1605238030}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28b8a24bc4e2fa14a9b62e4a5cdfc8ce, type: 3}
+  m_Script: {fileID: 11500000, guid: cd7d6d4da0b6b4b48aaa6f0386b1b105, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gravity_strength: 30
-  gravity_strength_exponent: 1
-  gravity_range: 25
-  target_tag: gravity
+  GravityRange: 30
+  GravityStrength: 30
+  GravityStrengthExponent: 1
+  TargetTag: gravity
 --- !u!23 &1605238033
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -428,8 +428,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35fc49500a4fecd4795269e0cf42034c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  orbit_target: {fileID: 1360400999}
-  orbit_kick: 850
+  OrbitKick: 850
+  OrbitTarget: {fileID: 1360400999}
 --- !u!1 &1837893907
 GameObject:
   m_ObjectHideFlags: 0
@@ -485,7 +485,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1837893907}
   m_LocalRotation: {x: .408217937, y: -.234569728, z: .109381676, w: .875426054}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalPosition: {x: 0, y: 100, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -583,8 +583,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 2099241957}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cba86af07ea6dfc4d8fa65df6cd6f147, type: 3}
+  m_Script: {fileID: 11500000, guid: a78c199d4b6624347adba318071bfc1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IsFreeLook: 0
   Target: {fileID: 247963322}
-  is_free_look: 0
