@@ -4,7 +4,7 @@ using System.Collections;
 public class Planet : MonoBehaviour
 {
     public Transform orbit_target; 
-    public int orbit_speed;
+    public float orbit_kick;
 
     private Rigidbody planet_physics;
 
@@ -16,10 +16,10 @@ public class Planet : MonoBehaviour
     void FixedUpdate()
     {
         transform.LookAt(orbit_target);
-        while (orbit_speed > 0)
+        while (orbit_kick > 0)
         {
-            planet_physics.AddForce(transform.right * orbit_speed);
-            orbit_speed = 0;
+            planet_physics.AddForce(transform.right * orbit_kick);
+            orbit_kick = 0;
         }
     }
 
