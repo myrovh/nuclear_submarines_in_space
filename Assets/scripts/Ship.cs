@@ -5,9 +5,9 @@ using JetBrains.Annotations;
 [UsedImplicitly]
 public class Ship : MonoBehaviour
 {
-    public float ForwardThrust = 10.0f;
-    public float OtherThrust = 1.0f;
-    public float ControlThrust = 1.0f;
+    public float ForwardThrust = 100.0f;
+    public float OtherThrust = 100.0f;
+    public float ControlThrust = 30.0f;
     public float RotationArrestSpeed = 1.0f;
     private Rigidbody _rigidbody;
     private Vector3 _updateTickForce;
