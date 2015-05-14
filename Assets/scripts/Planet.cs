@@ -25,14 +25,4 @@ public class Planet : MonoBehaviour
         }
     }
 
-    private void OnDrawGizmosSelected()
-    {
-        if (_planetPhysics == null)
-        {
-            return;
-        }
-        Gizmos.color = Color.red;
-        var direction = _planetPhysics.velocity;
-        Gizmos.DrawRay(transform.position, direction);
-    }
 }

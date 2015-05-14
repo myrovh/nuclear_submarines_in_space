@@ -128,6 +128,8 @@ GameObject:
   - 65: {fileID: 247963320}
   - 23: {fileID: 247963319}
   - 54: {fileID: 247963323}
+  - 114: {fileID: 247963324}
+  - 114: {fileID: 247963325}
   m_Layer: 0
   m_Name: player_ship
   m_TagString: gravity
@@ -206,6 +208,30 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &247963324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 247963318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf2b182d9a8f9b94fbb034f2ee64be35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ForwardThrust: 10
+  OtherThrust: 5
+--- !u!114 &247963325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 247963318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26bdca385b14c8a4fa1b6c60baa04240, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &666939918
 GameObject:
   m_ObjectHideFlags: 0
@@ -235,6 +261,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerObject: {fileID: 247963318}
   CameraObject: {fileID: 2099241957}
+  DeadZone: 0
 --- !u!4 &666939920
 Transform:
   m_ObjectHideFlags: 0
@@ -394,6 +421,7 @@ GameObject:
   - 114: {fileID: 1605238032}
   - 54: {fileID: 1605238031}
   - 114: {fileID: 1605238037}
+  - 114: {fileID: 1605238038}
   m_Layer: 0
   m_Name: planet
   m_TagString: gravity
@@ -499,6 +527,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OrbitKick: 850
   OrbitTarget: {fileID: 1360400999}
+--- !u!114 &1605238038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1605238030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26bdca385b14c8a4fa1b6c60baa04240, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1837893907
 GameObject:
   m_ObjectHideFlags: 0
