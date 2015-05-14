@@ -18,5 +18,9 @@ public class ForceGizmo : MonoBehaviour {
         Gizmos.color = Color.red;
         var direction = _physics.velocity;
         Gizmos.DrawRay(transform.position, direction);
+
+        Gizmos.color = Color.blue;
+        var rotation = _physics.angularVelocity;
+        Gizmos.DrawRay(transform.position, rotation);
     }
 }
