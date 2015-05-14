@@ -4,8 +4,9 @@ using System.Collections;
 public class UserInput : MonoBehaviour
 {
     public GameObject PlayerObject;
-    private Ship _playerShip;
     public GameObject CameraObject;
+    public float DeadZone = 0.0f;
+    private Ship _playerShip;
     private ShipCamera _cameraScript;
 
     void Start()
@@ -39,6 +40,10 @@ public class UserInput : MonoBehaviour
         {
             _playerShip.AddForceLeft(1.0f);
         }
+        else if (Input.GetKey(KeyCode.S))
+        {
+            _playerShip.AddForceBackwards(1.0f);
+        }
 
         if (Input.GetKey(KeyCode.D))
         {
@@ -49,5 +54,28 @@ public class UserInput : MonoBehaviour
         {
             _playerShip.AddForceForward(1.0f);
         }
+
+        if (Input.GetKey((KeyCode.Space)))
+        {
+            _playerShip.AddForceUp(1.0f);
+        }
+
+        if (Input.GetKey((KeyCode.LeftControl)))
+        {
+            _playerShip.AddForceDown(1.0f);
+        }
+
+        if (Input.GetKey(KeyCode.Q))
+        {
+            _playerShip.AddForceAxisRotation(false);
+        }
+
+        if (Input.GetKey(KeyCode.E))
+        {
+            _playerShip.AddForceAxisRotation(true);
+        }
+
+        _playerShip.AddForceXyRotation(Input.GetAxis("Mouse X"), 0.0f);
+        _playerShip.AddForceXyRotation(0.0f, Input.GetAxis("Mouse Y"));
     }
 }
