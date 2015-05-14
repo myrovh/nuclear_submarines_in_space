@@ -37,15 +37,20 @@ public class GravityWell : MonoBehaviour
 
     private void FixedUpdate()
     {
-        float forceMuliplier;
-        Vector3 forceDirection;
         foreach (var a in _objectsInRange)
         {
-            forceMuliplier = (-GravityStrength/
-                               Mathf.Pow(Mathf.Max(Vector3.Distance(transform.position, a.position), 1f),
-                                   GravityStrengthExponent));
-            forceDirection = (a.position - transform.position).normalized;
-            a.AddForce(forceDirection*forceMuliplier);
+            a.AddForce(GravityCalculation(a));
         }
+    }
+
+    public Vector3 GravityCalculation(Rigidbody inputObject)
+    {
+        float forceMuliplier = (-GravityStrength/
+                                Mathf.Pow(Mathf.Max(Vector3.Distance(transform.position, inputObject.position), 1f),
+                                    GravityStrengthExponent));
+        Vector3 forceDirection = (inputObject.position - transform.position).normalized;
+        forceDirection = forceDirection*forceMuliplier;
+
+        return forceDirection;
     }
 }
