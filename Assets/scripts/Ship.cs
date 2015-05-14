@@ -8,65 +8,81 @@ public class Ship : MonoBehaviour
     public float ForwardThrust = 10.0f;
     public float OtherThrust = 1.0f;
     public float ControlThrust = 1.0f;
-    public float RotationArrestSpeed = 10.0f;
+    public float RotationArrestSpeed = 1.0f;
     private Rigidbody _rigidbody;
+    private Vector3 _updateTickForce;
+    private Vector3 _updateTickRotation;
 
 	void Start ()
 	{
 	    _rigidbody = GetComponent<Rigidbody>();
+	    _updateTickForce = Vector3.zero;
+	    _updateTickRotation = Vector3.zero;
 	}
+
+    void FixedUpdate()
+    {
+        _rigidbody.AddRelativeForce(_updateTickForce);
+        _rigidbody.AddTorque(_updateTickRotation);
+        _updateTickForce = Vector3.zero;
+        _updateTickRotation = Vector3.zero;
+
+    }
 
     public void AddForceForward(float throttle)
     {
-        _rigidbody.AddRelativeForce(Vector3.forward * (ForwardThrust * throttle));
+        _updateTickForce += Vector3.forward*(ForwardThrust*throttle*Time.deltaTime);
     }
 
     public void AddForceBackwards(float throttle)
     {
-        _rigidbody.AddRelativeForce(-Vector3.forward * (ForwardThrust * throttle));
+        _updateTickForce += -Vector3.forward*(ForwardThrust*throttle*Time.deltaTime);
     }
 
     public void AddForceRight(float throttle)
     {
-        _rigidbody.AddRelativeForce(Vector3.right * (OtherThrust * throttle));
+        _updateTickForce += Vector3.right*(OtherThrust*throttle*Time.deltaTime);
     }
 
     public void AddForceLeft(float throttle)
     {
-        _rigidbody.AddRelativeForce(Vector3.left * (OtherThrust * throttle));
+        _updateTickForce += Vector3.left*(OtherThrust*throttle*Time.deltaTime);
     }
 
     public void AddForceUp(float throttle)
     {
-        _rigidbody.AddRelativeForce(Vector3.up * (OtherThrust * throttle));
+        _updateTickForce += Vector3.up*(OtherThrust*throttle*Time.deltaTime);
     }
 
     public void AddForceDown(float throttle)
     {
-        _rigidbody.AddRelativeForce(Vector3.down * (OtherThrust * throttle));
+        _updateTickForce += Vector3.down*(OtherThrust*throttle*Time.deltaTime);
     }
 
     public void AddForceXyRotation(float horizontal, float vertical)
     {
-        _rigidbody.AddRelativeTorque(transform.up * (horizontal * ControlThrust));
-        _rigidbody.AddRelativeTorque(transform.right * (vertical * ControlThrust));
+        _updateTickRotation += transform.up*(horizontal*ControlThrust*Time.deltaTime);
+        _updateTickRotation += -transform.right*(vertical*ControlThrust*Time.deltaTime);
     }
 
     public void AddForceAxisRotation(bool isPositive)
     {
         if (isPositive)
         {
-            _rigidbody.AddRelativeTorque(transform.forward*ControlThrust);
+            _updateTickRotation += transform.forward*ControlThrust*Time.deltaTime;
         }
         else
         {
-            _rigidbody.AddRelativeTorque(transform.forward*-ControlThrust);
+            _updateTickRotation += transform.forward*-ControlThrust*Time.deltaTime;
         }
     }
 
     public void ClampTorqueForce()
     {
-        Vector3 reveseRotation = -_rigidbody.angularVelocity;
-        _rigidbody.AddRelativeTorque(reveseRotation * RotationArrestSpeed);
+        if (_rigidbody.angularVelocity.magnitude > 0.0f)
+        {
+            Vector3 reveseRotation = -_rigidbody.angularVelocity;
+            _updateTickRotation += reveseRotation*RotationArrestSpeed;
+        }
     }
 }
