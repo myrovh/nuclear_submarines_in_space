@@ -8,6 +8,7 @@ public class Ship : MonoBehaviour
     public float ForwardThrust = 10.0f;
     public float OtherThrust = 1.0f;
     public float ControlThrust = 1.0f;
+    public float RotationArrestSpeed = 10.0f;
     private Rigidbody _rigidbody;
 
 	void Start ()
@@ -61,5 +62,11 @@ public class Ship : MonoBehaviour
         {
             _rigidbody.AddRelativeTorque(transform.forward*-ControlThrust);
         }
+    }
+
+    public void ClampTorqueForce()
+    {
+        Vector3 reveseRotation = -_rigidbody.angularVelocity;
+        _rigidbody.AddRelativeTorque(reveseRotation * RotationArrestSpeed);
     }
 }
