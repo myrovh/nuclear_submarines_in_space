@@ -67,12 +67,12 @@ public class UserInput : MonoBehaviour
 
         if (Input.GetKey(KeyCode.Q))
         {
-            _playerShip.AddForceAxisRotation(false);
+            _playerShip.AddForceAxisRotation(true);
         }
 
         if (Input.GetKey(KeyCode.E))
         {
-            _playerShip.AddForceAxisRotation(true);
+            _playerShip.AddForceAxisRotation(false);
         }
 
         if (Input.GetKey(KeyCode.R))
