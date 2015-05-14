@@ -80,7 +80,10 @@ public class UserInput : MonoBehaviour
             _playerShip.ClampTorqueForce();
         }
 
-        _playerShip.AddForceXyRotation(Input.GetAxis("Mouse X"), 0.0f);
-        _playerShip.AddForceXyRotation(0.0f, Input.GetAxis("Mouse Y"));
+        if (!Input.GetKey(KeyCode.R) && !Input.GetKey(KeyCode.C))
+        {
+            _playerShip.AddForceXyRotation(Input.GetAxis("Mouse X"), 0.0f);
+            _playerShip.AddForceXyRotation(0.0f, Input.GetAxis("Mouse Y"));
+        }
     }
 }
