@@ -219,8 +219,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf2b182d9a8f9b94fbb034f2ee64be35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ForwardThrust: 10
-  OtherThrust: 5
+  ForwardThrust: 100
+  OtherThrust: 50
+  ControlThrust: 1
+  RotationArrestSpeed: 1
 --- !u!114 &247963325
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -525,7 +527,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35fc49500a4fecd4795269e0cf42034c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OrbitKick: 850
+  OrbitKick: 700
   OrbitTarget: {fileID: 1360400999}
 --- !u!114 &1605238038
 MonoBehaviour:
