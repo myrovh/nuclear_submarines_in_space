@@ -64,5 +64,5 @@ $RECYCLE.BIN/
 *.lnk
 
 # Unity Visual Studio Plugin
-Assets/UnityVS.meta
-Assets/UnityVS
+UnityVS.meta
+UnityVS
