@@ -22,5 +22,11 @@ public class ForceGizmo : MonoBehaviour {
         Gizmos.color = Color.blue;
         var rotation = _physics.angularVelocity;
         Gizmos.DrawRay(transform.position, rotation);
+
+        DrawFlightPath(transform.position, _physics.velocity);
+    }
+
+    private void DrawFlightPath(Vector3 worldStartPosition, Vector3 force)
+    {
     }
 }

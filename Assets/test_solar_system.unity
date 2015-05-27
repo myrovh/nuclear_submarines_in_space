@@ -335,9 +335,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd7d6d4da0b6b4b48aaa6f0386b1b105, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GravityRange: 100
+  GravityRange: 50
   GravityStrength: 50
-  GravityStrengthExponent: 1
+  GravityStrengthExponent: 1.10000002
   TargetTag: gravity
 --- !u!23 &1360400996
 MeshRenderer:
@@ -457,10 +457,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd7d6d4da0b6b4b48aaa6f0386b1b105, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GravityRange: 30
-  GravityStrength: 30
-  GravityStrengthExponent: 1
-  TargetTag: gravity
+  GravityRange: 50
+  GravityStrength: 50
+  GravityStrengthExponent: 1.10000002
+  TargetTag: 
 --- !u!23 &1605238033
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -698,5 +698,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IsFreeLook: 0
   Target: {fileID: 247963322}
-  XSensitivity: 15
-  YSensitivity: 15
+  XSensitivity: 5
+  YSensitivity: 5
