@@ -216,7 +216,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 247963318}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf2b182d9a8f9b94fbb034f2ee64be35, type: 3}
+  m_Script: {fileID: 11500000, guid: 36d77fa19523e134192bd9e017342ce1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ForwardThrust: 100
@@ -231,7 +231,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 247963318}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 26bdca385b14c8a4fa1b6c60baa04240, type: 3}
+  m_Script: {fileID: 11500000, guid: 89d4dc1fef9554843ba3639bb46d316b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &666939918
@@ -258,12 +258,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 666939918}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fbb659b86a898ae42a125cca52bc36f8, type: 3}
+  m_Script: {fileID: 11500000, guid: df9872b0e0c11d746878dd15286a6e71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObject: {fileID: 247963318}
   CameraObject: {fileID: 2099241957}
-  DeadZone: 0
+  DeadZone: 20
 --- !u!4 &666939920
 Transform:
   m_ObjectHideFlags: 0
@@ -332,7 +332,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1360400994}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd7d6d4da0b6b4b48aaa6f0386b1b105, type: 3}
+  m_Script: {fileID: 11500000, guid: 326e605aed535f14496e20873c8d841f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   GravityRange: 50
@@ -454,13 +454,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1605238030}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd7d6d4da0b6b4b48aaa6f0386b1b105, type: 3}
+  m_Script: {fileID: 11500000, guid: be1d1cfdac6eeb3438d151a248b99075, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GravityRange: 50
-  GravityStrength: 50
-  GravityStrengthExponent: 1.10000002
-  TargetTag: 
+  OrbitKick: 700
+  SpinSpeed: 600
+  OrbitTarget: {fileID: 0}
 --- !u!23 &1605238033
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -503,7 +502,7 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1605238030}
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 4300000, guid: 6447b2b134cb7a04b90bb232c002f32a, type: 3}
 --- !u!4 &1605238036
 Transform:
   m_ObjectHideFlags: 0
@@ -524,11 +523,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1605238030}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35fc49500a4fecd4795269e0cf42034c, type: 3}
+  m_Script: {fileID: 11500000, guid: be1d1cfdac6eeb3438d151a248b99075, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OrbitKick: 700
-  OrbitTarget: {fileID: 1360400999}
+  OrbitKick: 0
+  SpinSpeed: 0
+  OrbitTarget: {fileID: 0}
 --- !u!114 &1605238038
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -537,7 +537,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1605238030}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 26bdca385b14c8a4fa1b6c60baa04240, type: 3}
+  m_Script: {fileID: 11500000, guid: 89d4dc1fef9554843ba3639bb46d316b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1837893907
@@ -693,7 +693,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2099241957}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a78c199d4b6624347adba318071bfc1e, type: 3}
+  m_Script: {fileID: 11500000, guid: 13d53649a894a4140b088d1d07067d37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   IsFreeLook: 0

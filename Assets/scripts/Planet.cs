@@ -7,6 +7,7 @@ public class Planet : MonoBehaviour
 {
     // ReSharper disable once MemberCanBePrivate.Global
     public float OrbitKick;
+    public float SpinSpeed;
     [UsedImplicitly] public Transform OrbitTarget;
     private Rigidbody _planetPhysics;
 
@@ -17,11 +18,19 @@ public class Planet : MonoBehaviour
 
     private void FixedUpdate()
     {
-        transform.LookAt(OrbitTarget);
+        if (OrbitTarget != null)
+        {
+            transform.LookAt(OrbitTarget);
+        }
         while (OrbitKick > 0)
         {
             _planetPhysics.AddForce(transform.right*OrbitKick);
             OrbitKick = 0;
+        }
+        while (SpinSpeed > 0)
+        {
+            _planetPhysics.AddTorque(transform.forward*SpinSpeed);
+            SpinSpeed = 0;
         }
     }
 
