@@ -263,7 +263,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerObject: {fileID: 247963318}
   CameraObject: {fileID: 2099241957}
-  DeadZone: 20
+  DeadZone: 0
 --- !u!4 &666939920
 Transform:
   m_ObjectHideFlags: 0
