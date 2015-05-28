@@ -336,9 +336,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GravityRange: 50
-  GravityStrength: 50
   GravityStrengthExponent: 1.10000002
-  TargetTag: gravity
 --- !u!23 &1360400996
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -422,7 +420,6 @@ GameObject:
   - 23: {fileID: 1605238033}
   - 114: {fileID: 1605238032}
   - 54: {fileID: 1605238031}
-  - 114: {fileID: 1605238037}
   - 114: {fileID: 1605238038}
   m_Layer: 0
   m_Name: planet
@@ -515,20 +512,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 119358597}
   m_RootOrder: 1
---- !u!114 &1605238037
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1605238030}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be1d1cfdac6eeb3438d151a248b99075, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  OrbitKick: 0
-  SpinSpeed: 0
-  OrbitTarget: {fileID: 0}
 --- !u!114 &1605238038
 MonoBehaviour:
   m_ObjectHideFlags: 0

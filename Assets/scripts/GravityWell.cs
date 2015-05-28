@@ -5,9 +5,9 @@ public class GravityWell : MonoBehaviour
 {
     private readonly List<Rigidbody> _objectsInRange = new List<Rigidbody>();
     public float GravityRange = 50f;
-    public float GravityStrength = 50f;
+    private float GravityStrength = GlobalGravity.GravityStrength;
     public float GravityStrengthExponent = 1.1f;
-    public string TargetTag = "";
+    private string TargetTag = GlobalGravity.TargetTag;
 
     private void Start()
     {
