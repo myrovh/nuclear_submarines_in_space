@@ -1,16 +1,20 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody))]
 public class GravityWell : MonoBehaviour
 {
-    private readonly List<Rigidbody> _objectsInRange = new List<Rigidbody>();
     public float GravityRange = 50f;
+
+    private List<Rigidbody> _objectsInRange = new List<Rigidbody>();
     private float GravityStrength = GlobalGravity.GravityStrength;
-    public float GravityStrengthExponent = 1.1f;
+    private float GravityStrengthExponent = GlobalGravity.GravityStrengthExponent;
     private string TargetTag = GlobalGravity.TargetTag;
+    private Rigidbody _rigidbody;
 
     private void Start()
     {
+        _rigidbody = gameObject.GetComponent<Rigidbody>();
         // Setup collider used to add rigidbodies to gravity influence
         var thisCollider = gameObject.AddComponent<SphereCollider>();
         thisCollider.radius = GravityRange;
@@ -48,6 +52,7 @@ public class GravityWell : MonoBehaviour
         float forceMuliplier = (-GravityStrength/
                                 Mathf.Pow(Mathf.Max(Vector3.Distance(transform.position, inputObject.position), 1f),
                                     GravityStrengthExponent));
+        forceMuliplier *= _rigidbody.mass;
         Vector3 forceDirection = (inputObject.position - transform.position).normalized;
         forceDirection = forceDirection*forceMuliplier;
 
