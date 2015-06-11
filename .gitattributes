@@ -16,3 +16,4 @@
 *.rtf	 diff=astextplain
 *.RTF	 diff=astextplain
 *.blend filter=lfs diff=lfs merge=lfs -crlf
+*.fbx filter=lfs diff=lfs merge=lfs -crlf
