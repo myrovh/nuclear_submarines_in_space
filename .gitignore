@@ -63,6 +63,9 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+# Blender Temp Files
+*.blend1
+
 # Unity Visual Studio Plugin
 UnityVS.meta
 UnityVS
