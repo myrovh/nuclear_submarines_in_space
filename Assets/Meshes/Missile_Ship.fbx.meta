@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 5ea757a7af6775a43b19cd66f05b892f
-timeCreated: 1434023830
+guid: c96c02301ec60624bbe8eda17fbd7666
+timeCreated: 1434032932
 licenseType: Free
 ModelImporter:
   serializedVersion: 18
@@ -9,7 +9,8 @@ ModelImporter:
     400000: //RootNode
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Cube
+    4300000: LargeShip
+    4300002: Large_Ship
   materials:
     importMaterials: 0
     materialName: 0

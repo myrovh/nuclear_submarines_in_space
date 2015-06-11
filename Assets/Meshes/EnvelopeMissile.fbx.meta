@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 5ea757a7af6775a43b19cd66f05b892f
-timeCreated: 1434023830
+guid: 770102139300f494e84bc43ab1a0bdbd
+timeCreated: 1434027235
 licenseType: Free
 ModelImporter:
   serializedVersion: 18
@@ -9,7 +9,7 @@ ModelImporter:
     400000: //RootNode
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Cube
+    4300000: EnvelopeMissile
   materials:
     importMaterials: 0
     materialName: 0
