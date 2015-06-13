@@ -388,6 +388,56 @@ MeshFilter:
   m_PrefabInternal: {fileID: 421822419}
   m_GameObject: {fileID: 421822421}
   m_Mesh: {fileID: 4300000, guid: 5ea757a7af6775a43b19cd66f05b892f, type: 3}
+--- !u!1001 &565918995
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 421822420}
+    m_Modifications:
+    - target: {fileID: 458060, guid: e23cdc1592492f340afaf3d73c5f7ed8, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: .959999979
+      objectReference: {fileID: 0}
+    - target: {fileID: 458060, guid: e23cdc1592492f340afaf3d73c5f7ed8, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -.99000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 458060, guid: e23cdc1592492f340afaf3d73c5f7ed8, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -1.71000004
+      objectReference: {fileID: 0}
+    - target: {fileID: 458060, guid: e23cdc1592492f340afaf3d73c5f7ed8, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 458060, guid: e23cdc1592492f340afaf3d73c5f7ed8, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 458060, guid: e23cdc1592492f340afaf3d73c5f7ed8, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 458060, guid: e23cdc1592492f340afaf3d73c5f7ed8, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: -4.02331352e-07
+      objectReference: {fileID: 0}
+    - target: {fileID: 458060, guid: e23cdc1592492f340afaf3d73c5f7ed8, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 19855594, guid: e23cdc1592492f340afaf3d73c5f7ed8, type: 2}
+      propertyPath: SubModule.subEmitterBirth
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 141734, guid: e23cdc1592492f340afaf3d73c5f7ed8, type: 2}
+      propertyPath: m_Name
+      value: thruster_rear_right
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: e23cdc1592492f340afaf3d73c5f7ed8, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &666939918
 GameObject:
   m_ObjectHideFlags: 0
