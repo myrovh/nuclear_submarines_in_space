@@ -395,6 +395,10 @@ Prefab:
       propertyPath: m_Name
       value: thruster_rear_left
       objectReference: {fileID: 0}
+    - target: {fileID: 2015294, guid: 3117c1c5e7a66274fa05fe13adef5224, type: 2}
+      propertyPath: far clip plane
+      value: 6000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3117c1c5e7a66274fa05fe13adef5224, type: 2}
   m_IsPrefabParent: 0

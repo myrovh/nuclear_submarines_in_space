@@ -29,6 +29,17 @@ public class Ship : MonoBehaviour
 
     }
 
+    void OnCollisionEnter(Collision col)
+    {
+        Debug.Log(col.gameObject.name);
+        GameOver();
+    }
+
+    public void GameOver()
+    {
+        Application.LoadLevel("menu");
+    }
+
     public void AddForceForward(float throttle)
     {
         _updateTickForce += Vector3.forward*(ForwardThrust*throttle*Time.deltaTime);
