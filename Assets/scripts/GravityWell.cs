@@ -43,7 +43,10 @@ public class GravityWell : MonoBehaviour
     {
         foreach (var a in _objectsInRange)
         {
-            a.AddForce(GravityCalculation(a.position));
+            if (a != null)
+            {
+                a.AddForce(GravityCalculation(a.position));
+            }
         }
     }
 

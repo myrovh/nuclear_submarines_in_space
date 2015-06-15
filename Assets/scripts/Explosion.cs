@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 
-public class Explosion : MonoBehaviour {
+public class Explosion : MonoBehaviour
+{
     private List<Rigidbody> _objectsInRange = new List<Rigidbody>();
     private SphereCollider _explosionRadius;
     public float ExplosionRange = 1.0f;
@@ -10,13 +11,13 @@ public class Explosion : MonoBehaviour {
     public float Lifetime = 1.0f;
 
 
-	// Use this for initialization
-	void Start ()
-	{
-	    _explosionRadius = gameObject.AddComponent<SphereCollider>();
-	    _explosionRadius.radius = ExplosionRange;
-	    _explosionRadius.isTrigger = true;
-	}
+    // Use this for initialization
+    void Start()
+    {
+        _explosionRadius = gameObject.AddComponent<SphereCollider>();
+        _explosionRadius.radius = ExplosionRange;
+        _explosionRadius.isTrigger = true;
+    }
 
     private void OnTriggerEnter(Collider otherCollider)
     {
@@ -43,8 +44,8 @@ public class Explosion : MonoBehaviour {
         if (Lifetime >= 0)
         {
             ExplosionStart();
-            transform.localScale = transform.localScale*1.1f;
-            _explosionRadius.radius = _explosionRadius.radius+0.1f;
+            transform.localScale = transform.localScale * 1.1f;
+            _explosionRadius.radius = _explosionRadius.radius + 0.1f;
         }
         else
         {
@@ -56,9 +57,12 @@ public class Explosion : MonoBehaviour {
     {
         foreach (var a in _objectsInRange)
         {
-            if (a.isKinematic)
+            if (a != null)
             {
-                a.AddExplosionForce(ExplosionForce, gameObject.transform.position, ExplosionRange);
+                if (a.isKinematic)
+                {
+                    a.AddExplosionForce(ExplosionForce, gameObject.transform.position, ExplosionRange);
+                }
             }
         }
     }

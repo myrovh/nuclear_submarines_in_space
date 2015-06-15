@@ -2200,29 +2200,13 @@ Prefab:
       propertyPath: m_RootOrder
       value: 21
       objectReference: {fileID: 0}
-    - target: {fileID: 192424, guid: 6bf0a28178f32d44382e80522fac74ea, type: 2}
-      propertyPath: m_Name
-      value: MissileFoe 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 11458498, guid: 6bf0a28178f32d44382e80522fac74ea, type: 2}
-      propertyPath: target
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 11458498, guid: 6bf0a28178f32d44382e80522fac74ea, type: 2}
-      propertyPath: ForwardThrust
-      value: 60
-      objectReference: {fileID: 0}
-    - target: {fileID: 11458498, guid: 6bf0a28178f32d44382e80522fac74ea, type: 2}
-      propertyPath: SecondsOfFuel
-      value: 40
-      objectReference: {fileID: 0}
     - target: {fileID: 11458498, guid: 6bf0a28178f32d44382e80522fac74ea, type: 2}
       propertyPath: Target
       value: 
       objectReference: {fileID: 497422069}
-    - target: {fileID: 6580082, guid: 6bf0a28178f32d44382e80522fac74ea, type: 2}
-      propertyPath: m_IsTrigger
-      value: 0
+    - target: {fileID: 192424, guid: 6bf0a28178f32d44382e80522fac74ea, type: 2}
+      propertyPath: m_Name
+      value: MissileFoe 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6bf0a28178f32d44382e80522fac74ea, type: 2}
