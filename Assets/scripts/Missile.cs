@@ -44,9 +44,8 @@ public class Missile : MonoBehaviour
         }
     }
 
-    void OnCollisionEnter(Collision col)
+    void OnCollisionEnter()
     {
-        Debug.Log(col.gameObject);
         Explode();
     }
 
