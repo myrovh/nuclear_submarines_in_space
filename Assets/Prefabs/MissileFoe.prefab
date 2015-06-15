@@ -29,7 +29,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 192424}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 2.38418579e-07}
-  m_LocalPosition: {x: -107.760002, y: 71.8700027, z: 121.599998}
+  m_LocalPosition: {x: -140.100006, y: 91.3000031, z: 121.599998}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -118,23 +118,23 @@ TrailRenderer:
   m_SortingOrder: 0
   m_Time: 8
   m_StartWidth: 1
-  m_EndWidth: 1
+  m_EndWidth: .100000001
   m_Colors:
     m_Color[0]:
       serializedVersion: 2
-      rgba: 4279775487
+      rgba: 840446207
     m_Color[1]:
       serializedVersion: 2
-      rgba: 4279669978
+      rgba: 840340698
     m_Color[2]:
       serializedVersion: 2
-      rgba: 4281330922
+      rgba: 842001642
     m_Color[3]:
       serializedVersion: 2
-      rgba: 4281330922
+      rgba: 506457322
     m_Color[4]:
       serializedVersion: 2
-      rgba: 4281330922
+      rgba: 170913002
   m_MinVertexDistance: .100000001
   m_Autodestruct: 0
 --- !u!114 &11458498
@@ -148,9 +148,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dbb82d8ecf00ed4286e5af55542e077, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ForwardThrust: 100
+  ForwardThrust: 60
   Throttle: 1
   SecondsOfFuel: 100
+  Target: {fileID: 0}
+  Explosion: {fileID: 137266, guid: 1ef955309c09cd84bb8f6e37f08d7e10, type: 2}
 --- !u!114 &11490224
 MonoBehaviour:
   m_ObjectHideFlags: 1

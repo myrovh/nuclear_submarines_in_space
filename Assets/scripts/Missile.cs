@@ -44,14 +44,16 @@ public class Missile : MonoBehaviour
         }
     }
 
-    void OnCollisionEnder()
+    void OnCollisionEnter(Collision col)
     {
+        Debug.Log(col.gameObject);
         Explode();
     }
 
     private void Explode()
     {
-        
+        Instantiate(Explosion, transform.position, Quaternion.identity);
+        Destroy(gameObject);
     }
 
     public void AddForceForward(float throttle)

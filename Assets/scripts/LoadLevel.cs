@@ -2,19 +2,8 @@
 using System.Collections;
 
 public class LoadLevel : MonoBehaviour {
-
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
-
-    void SwitchToGame()
+    public void SwitchToGame()
     {
-
+        Application.LoadLevel("test_solar_system");
     }
 }
